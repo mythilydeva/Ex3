@@ -38,9 +38,9 @@ public class MainActivity extends ActionBarActivity {
 			
 			@Override
 			public void onClick(View arg0) {
-				String data=ed1.getText().toString();
+				String data="rectangle";
 				Intent i=new Intent(MainActivity.this,SecondActivity.class);
-				i.putExtra("one", data);
+				i.putExtra("value", data);
 				startActivity(i);
 			}
 		});
@@ -48,9 +48,9 @@ public class MainActivity extends ActionBarActivity {
 			
 			@Override
 			public void onClick(View arg0) {
-				String data=ed2.getText().toString();
+				String data="square";
 				Intent i=new Intent(MainActivity.this,SecondActivity.class);
-				i.putExtra("two", data);
+				i.putExtra("value", data);
 				startActivity(i);
 			}
 		});
@@ -58,9 +58,9 @@ public class MainActivity extends ActionBarActivity {
 		
 		@Override
 		public void onClick(View arg0) {
-			String data=ed3.getText().toString();
+			String data="circle";
 			Intent i=new Intent(MainActivity.this,SecondActivity.class);
-			i.putExtra("three", data);
+			i.putExtra("value", data);
 			startActivity(i);
 		}
 	});
@@ -68,9 +68,9 @@ public class MainActivity extends ActionBarActivity {
 		
 		@Override
 		public void onClick(View arg0) {
-			String data=ed4.getText().toString();
+			String data="string";
 			Intent i=new Intent(MainActivity.this,SecondActivity.class);
-			i.putExtra("four", data);
+			i.putExtra("value", data);
 			startActivity(i);
 		}
 	});
