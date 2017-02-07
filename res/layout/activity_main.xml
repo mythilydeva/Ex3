@@ -20,14 +20,6 @@
     </EditText>
 
     <Button
-        android:id="@+id/sq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ed1"
-        android:layout_marginRight="14dp"
-        android:text="square" />
-
-    <Button
         android:id="@+id/cir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,16 +37,6 @@
         android:layout_alignLeft="@+id/sq"
         android:text="String" />
 
-    <Button
-        android:id="@+id/rect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/sq"
-        android:layout_alignBottom="@+id/sq"
-        android:layout_marginLeft="17dp"
-        android:layout_toRightOf="@+id/sq"
-        android:text="Rectangle" />
-
     <TextView
         android:id="@+id/text1"
         android:layout_width="wrap_content"
@@ -63,5 +45,23 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
         android:text="Enter the dimension and Choose the shape" />
+
+    <Button
+        android:id="@+id/rect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ed1"
+        android:layout_marginTop="36dp"
+        android:layout_toLeftOf="@+id/sq"
+        android:text="Rectangle" />
+
+    <Button
+        android:id="@+id/sq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/str"
+        android:layout_alignRight="@+id/ed1"
+        android:layout_marginRight="38dp"
+        android:text="square" />
 
 </RelativeLayout>

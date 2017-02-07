@@ -22,7 +22,7 @@ public class MainActivity extends ActionBarActivity {
         sq=(Button) findViewById(R.id.sq);
         cir=(Button) findViewById(R.id.cir);
         str=(Button) findViewById(R.id.str);
-        text=(TextView) findViewById(R.id.text);
+        text=(TextView) findViewById(R.id.text1);
         ed1=(EditText) findViewById(R.id.ed1);
         
         
@@ -34,7 +34,7 @@ public class MainActivity extends ActionBarActivity {
 				String val=ed1.getText().toString();
 				Intent i=new Intent(MainActivity.this,SecondActivity.class);
 				i.putExtra("value", data);
-				i.putExtra("dim", val);
+				i.putExtra("dimension", val);
 				startActivity(i);
 			}
 		});
@@ -42,11 +42,11 @@ public class MainActivity extends ActionBarActivity {
 			
 			@Override
 			public void onClick(View arg0) {
-				String val=ed1.getText().toString();
 				String data="square";
+				String val=ed1.getText().toString();
 				Intent i=new Intent(MainActivity.this,SecondActivity.class);
 				i.putExtra("value", data);
-				i.putExtra("dim", val);
+				i.putExtra("dimension", val);
 				startActivity(i);
 			}
 		});
@@ -54,11 +54,11 @@ public class MainActivity extends ActionBarActivity {
 		
 		@Override
 		public void onClick(View arg0) {
-			String val=ed1.getText().toString();
 			String data="circle";
+			String val=ed1.getText().toString();
 			Intent i=new Intent(MainActivity.this,SecondActivity.class);
 			i.putExtra("value", data);
-			i.putExtra("dim", val);
+			i.putExtra("dimension", val);
 			startActivity(i);
 		}
 	});
@@ -66,11 +66,11 @@ public class MainActivity extends ActionBarActivity {
 		
 		@Override
 		public void onClick(View arg0) {
-			String val=ed1.getText().toString();
 			String data="string";
+			String val=ed1.getText().toString();
 			Intent i=new Intent(MainActivity.this,SecondActivity.class);
 			i.putExtra("value", data);
-			i.putExtra("dim", val);
+			i.putExtra("dimension", val);
 			startActivity(i);
 		}
 	});
