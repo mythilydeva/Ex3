@@ -1,8 +1,5 @@
 package com.example.graphics;
 
-import com.example.app.MainActivity;
-import com.example.app.SecondActivity;
-
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.graphics.Canvas;
@@ -43,16 +40,46 @@ public class MainActivity extends ActionBarActivity {
 			public void onClick(View arg0) {
 				String data=ed1.getText().toString();
 				Intent i=new Intent(MainActivity.this,SecondActivity.class);
-				i.putExtra("username", data);
+				i.putExtra("one", data);
 				startActivity(i);
 			}
 		});
+        sq.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				String data=ed2.getText().toString();
+				Intent i=new Intent(MainActivity.this,SecondActivity.class);
+				i.putExtra("two", data);
+				startActivity(i);
+			}
+		});
+        cir.setOnClickListener(new View.OnClickListener() {
+		
+		@Override
+		public void onClick(View arg0) {
+			String data=ed3.getText().toString();
+			Intent i=new Intent(MainActivity.this,SecondActivity.class);
+			i.putExtra("three", data);
+			startActivity(i);
+		}
+	});
+        str.setOnClickListener(new View.OnClickListener() {
+		
+		@Override
+		public void onClick(View arg0) {
+			String data=ed4.getText().toString();
+			Intent i=new Intent(MainActivity.this,SecondActivity.class);
+			i.putExtra("four", data);
+			startActivity(i);
+		}
+	});
     
     
     
 
-        				
-        }
+    }
+}
    
 
     
