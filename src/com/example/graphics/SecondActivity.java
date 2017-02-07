@@ -10,78 +10,74 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.Menu;
 import android.view.View;
-
-public class SecondActivity extends Activity
-{
-	String data,d;
-	int dim,dim1;
-	 GraphicsView graphicsview;  
-	     
+public class SecondActivity extends Activity{
+	ShapeView shapeview;
+	String data,data1,data2,data3,data4;
+	int x,y,l,b;
 	protected void onCreate(Bundle  savedInstanceState)
 	{
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.scndactivity);
-        graphicsview = new GraphicsView(this);  
-        setContentView(graphicsview);  
- 
-
-		//Intent i=getIntent();
-		 //data= i.getStringExtra("value");
+	super.onCreate(savedInstanceState);
+	shapeview=new ShapeView(this);
+	setContentView(shapeview);
+	Intent i=getIntent();
+	data= i.getStringExtra("data");
+	data1=i.getStringExtra("val1");
+	data2=i.getStringExtra("val2");
+	data3=i.getStringExtra("val3");
+	data4=i.getStringExtra("val4");
+	x=Integer.parseInt(data1);
+	y=Integer.parseInt(data2);
+	l=Integer.parseInt(data3);
+	b=Integer.parseInt(data4);
 	}
-	private class GraphicsView extends View{  
-        public GraphicsView(Context context){  
-            super(context);  
-        }  		
+	public class ShapeView extends View
+	{
 
-				@Override
-				protected void onDraw(Canvas canvas) {
-					super.onDraw(canvas);
-					Intent i=getIntent();
-					data= i.getStringExtra("value");
-					d=i.getStringExtra("dimension");
-					dim=Integer.parseInt(d);
-					dim1=dim*2;
-					// custom drawing code here
-					Paint paint = new Paint();
-					paint.setStyle(Paint.Style.FILL);
-		 
-					// make the entire canvas white
-					paint.setColor(Color.CYAN);
-					canvas.drawPaint(paint);
-			
-					if(data.equals("rectangle")){
-					paint.setAntiAlias(false);
-					paint.setColor(Color.MAGENTA);
-					canvas.drawRect(10, 10,dim,dim1, paint);
-					}
-		 
-				
-					if(data.equals("circle")){
-					paint.setAntiAlias(true);
-					paint.setColor(Color.GRAY);
-					canvas.drawCircle(60, 20, dim, paint);
-					}
-		 
-					if(data.equals("square")){
-					paint.setAntiAlias(false);
-					paint.setColor(Color.RED);
-					canvas.drawRect(10, 5, dim, dim, paint);
-					}		 
-					canvas.rotate(-40);
-					if(data.equals("string")){		 
-					paint.setStyle(Paint.Style.FILL);
-					canvas.drawText("Graphics Rotation", 45, 185, paint);
-					}
-					canvas.restore();
-				}
-			}
-	 @Override  
-	    public boolean onCreateOptionsMenu(Menu menu) {  
-	        // Inflate the menu; this adds items to the action bar if it is present.  
-	        getMenuInflater().inflate(R.menu.main, menu);  
-	        return true;  
-	    }  
-	}
+		public ShapeView(Context context) {
+			super(context);
+			// TODO Auto-generated constructor stub
+		}
 		
-	
+		
+		protected void onDraw(Canvas canvas)
+		{
+		super.onDraw(canvas);
+		 
+		// custom drawing code here
+		Paint paint = new Paint();
+		paint.setStyle(Paint.Style.FILL);
 
+		// make the entire canvas white
+		paint.setColor(Color.BLACK);
+		canvas.drawPaint(paint);
+
+		
+		// draw green circle with anti aliasing turned on
+		if(data.equals("circle"))
+		{
+		paint.setAntiAlias(true);
+		paint.setColor(Color.BLUE);
+		canvas.drawCircle(x, y, l, paint);
+		}
+
+		// draw red rectangle with anti aliasing turned off
+		if(data.equals("rectangle"))
+		{
+		paint.setAntiAlias(false);
+		paint.setColor(Color.MAGENTA);
+		canvas.drawRect(x, y, l, b, paint);
+		}
+		if(data.equals("square"))
+		{
+		paint.setAntiAlias(false);
+		paint.setColor(Color.MAGENTA);
+		canvas.drawRect(x, y, l, b, paint);
+		}
+
+	
+		
+	}	
+	}
+	
+	
+}
