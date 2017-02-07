@@ -1,5 +1,6 @@
 package com.example.graphics;
 
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.app.Activity;
@@ -16,10 +17,15 @@ import android.view.View;
 public class SecondActivity extends Activity
 {
 	String data;
+	 GraphicsView graphicsview;  
+	     
 	protected void onCreate(Bundle  savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.scndactivity);
+        graphicsview = new GraphicsView(this);  
+        setContentView(graphicsview);  
+ 
 
 		//Intent i=getIntent();
 		 //data= i.getStringExtra("value");
@@ -41,7 +47,7 @@ public class SecondActivity extends Activity
 					// make the entire canvas white
 					paint.setColor(Color.CYAN);
 					canvas.drawPaint(paint);
-		 
+					canvas.drawRect(10,10,10,10, paint);
 			
 					if(data.equals("rectangle")){
 					paint.setAntiAlias(false);
@@ -56,7 +62,7 @@ public class SecondActivity extends Activity
 					canvas.drawCircle(60, 20, 15, paint);
 					}
 		 
-										if(data.equals("square")){
+					if(data.equals("square")){
 					paint.setAntiAlias(false);
 					paint.setColor(Color.RED);
 					canvas.drawRect(100, 5, 200, 30, paint);

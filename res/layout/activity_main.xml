@@ -53,38 +53,38 @@
         android:ems="10" />
 
     <Button
+        android:id="@+id/sq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/ed4"
+        android:layout_below="@+id/ed4"
+        android:layout_marginRight="14dp"
+        android:text="square" />
+
+    <Button
         android:id="@+id/rect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ed4"
-        android:layout_marginTop="53dp"
-        android:layout_toLeftOf="@+id/text1"
+        android:layout_alignLeft="@+id/ed4"
+        android:layout_alignTop="@+id/sq"
         android:text="Rectangle" />
 
     <Button
         android:id="@+id/cir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/rect"
         android:layout_below="@+id/rect"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginRight="14dp"
         android:text="Circle" />
 
     <Button
         android:id="@+id/str"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/sq"
-        android:layout_alignTop="@+id/cir"
+        android:layout_alignBaseline="@+id/cir"
+        android:layout_alignBottom="@+id/cir"
+        android:layout_alignLeft="@+id/sq"
         android:text="String" />
-
-    <Button
-        android:id="@+id/sq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/rect"
-        android:layout_alignRight="@+id/text1"
-        android:text="square" />
 
 </RelativeLayout>
